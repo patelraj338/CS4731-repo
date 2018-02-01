@@ -31,21 +31,30 @@ def myCreateGrid(world, cellsize):
         dimensions = (int(math.ceil(world.getDimensions()[0]/cellsize)), int(math.ceil(world.getDimensions()[1]/cellsize)))
         grid = [[True]*dimensions[1] for _ in range(dimensions[0])]
 
-        for obstacle in world.getObstacles():
-            minX = obstacle.getPoints()[0][0]
-            minY = obstacle.getPoints()[0][1]
-            maxX = obstacle.getPoints()[0][0]
-            maxY = obstacle.getPoints()[0][1]
-            for i in range(1, len(obstacle.getPoints())):
-                minX = obstacle.getPoints()[i][0] if obstacle.getPoints()[i][0] < minX else minX
-                maxX = obstacle.getPoints()[i][0] if obstacle.getPoints()[i][0] > maxX else maxX
-                minY = obstacle.getPoints()[i][1] if obstacle.getPoints()[i][1] < minY else minY
-                maxY = obstacle.getPoints()[i][1] if obstacle.getPoints()[i][1] > maxY else maxY
+        #j is row(y) and i is column(x)
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                topLeftCornX = i * cellsize
+                topLeftCornY = j * cellsize
+                topLeftPoint = (topLeftCornX, topLeftCornY)
 
-            for i in range(int(minX-0.5), int(maxX+0.5)):
-                for j in range(int(minY-0.5), int(maxY+0.5)):
-                    if grid[int(i/cellsize)][int(j/cellsize)]:
-                        grid[int(i/cellsize)][int(j/cellsize)] = False
+                if topLeftCornX + cellsize >= world.getDimensions()[0] or topLeftCornY + cellsize >= world.getDimensions()[1]:
+                    grid[i][j] = False
+                    continue
+
+                if rayTraceWorld(topLeftPoint, (topLeftPoint[0] + cellsize, topLeftPoint[1]), world.getLines()[4:]) or \
+                    rayTraceWorld(topLeftPoint, (topLeftPoint[0] , topLeftPoint[1]+cellsize), world.getLines()[4:]) or \
+                    rayTraceWorld((topLeftPoint[0] , topLeftPoint[1]+cellsize), (topLeftPoint[0] + cellsize, topLeftPoint[1]+cellsize), world.getLines()[4:]) or \
+                    rayTraceWorld((topLeftPoint[0] + cellsize , topLeftPoint[1]), (topLeftPoint[0] + cellsize, topLeftPoint[1]+cellsize), world.getLines()[4:]):
+                    grid[i][j] = False
+                    continue
+
+                for obstacle in world.getObstacles():
+                    if pointInsidePolygonPoints(topLeftPoint, obstacle.getPoints()) or \
+                        pointInsidePolygonPoints((topLeftPoint[0] + cellsize, topLeftPoint[1]), obstacle.getPoints()) or \
+                        pointInsidePolygonPoints((topLeftPoint[0], topLeftPoint[1]+ cellsize), obstacle.getPoints()) or \
+                        pointInsidePolygonPoints((topLeftPoint[0] + cellsize, topLeftPoint[1] + cellsize), obstacle.getPoints()):
+                        grid[i][j] = False
 
 	### YOUR CODE GOES ABOVE HERE ###
 	return grid, dimensions
