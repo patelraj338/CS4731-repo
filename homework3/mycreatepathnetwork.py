@@ -62,10 +62,10 @@ def constructEdges(pathnodes, world, polys, agent = None):
                     hitboxFlag = True
 
                 if not hitboxFlag:
-                    appendLineNoDuplicates(tempLine, lines)
-                    # for polygon in polys:
-                    #     if pointOnPolygon(pathnodes[i], polygon) and pointOnPolygon(pathnodes[j], polygon):
-                    #         appendLineNoDuplicates(tempLine, lines)
+                    # appendLineNoDuplicates(tempLine, lines)
+                    for polygon in polys:
+                        if pointOnPolygon(pathnodes[i], polygon) and pointOnPolygon(pathnodes[j], polygon):
+                            appendLineNoDuplicates(tempLine, lines)
 
     return lines
 
@@ -92,6 +92,15 @@ def checkPolygonValidity (poly,  world, polyList):
         while line in polyListCopy:
             polyListCopy.remove(line)
 
+    worldlines = world.getLines()[4:]
+    for line in realPolygonLines:
+        while line in worldlines:
+            worldlines.remove(line)
+
+    for line in invertedPolygonLines:
+        while line in worldlines:
+            worldlines.remove(line)
+
     last = None
     for p in poly:
         if last != None:
@@ -104,10 +113,10 @@ def checkPolygonValidity (poly,  world, polyList):
     last = None
     for p in poly:
         if last != None:
-            if rayTraceWorldNoEndPoints(last, p, world.getLines()[4:]) != None:
+            if rayTraceWorldNoEndPoints(last, p, worldlines) != None:
                 return False
         last = p
-    if rayTraceWorldNoEndPoints(poly[len(poly)-1], poly[0], world.getLines()[4:]) != None:
+    if rayTraceWorldNoEndPoints(poly[len(poly)-1], poly[0], worldlines) != None:
         return False
 
     for obstacle in world.getObstacles():
@@ -130,8 +139,24 @@ def combinePolygons3To4(polygons):
             if polygon1 in availableTriangle and polygon2 in availableTriangle and \
                 polygonsAdjacent(polygon1, polygon2):
                 common = commonPoints(polygon1, polygon2)
+                for p in polygon2:
+                    if p not in common:
+                        common.insert(1, p)
+                for p in polygon1:
+                    if p not in common:
+                        common.append(p)
+                if isConvex(common):
+                    quadPolygons.append(tuple(common))
+                    try:
+                        availableTriangle.remove(polygon1)
+                    except ValueError:
+                        pass
+                    try:
+                        availableTriangle.remove(polygon2)
+                    except ValueError:
+                        pass
 
-
+    return (availableTriangle + quadPolygons)
 
 
 # Creates a path node network that connects the midpoints of each nav mesh together
@@ -159,7 +184,18 @@ def myCreatePathNetwork(world, agent = None):
                     	polyLines.append((newPoly[len(newPoly)-1], newPoly[0]))
 
                         polys.append(newPoly)
-                        drawPolygon(newPoly, world.debug, (0,255,0))
+                        # drawPolygon(newPoly, world.debug, (0,255,0))
+
+        polys = combinePolygons3To4(polys)
+        polys = combinePolygons3To4(polys)
+        polyLines = []
+        for pol in polys:
+            last = None
+            for p in pol:
+                if last != None and (last,p) not in polyLines and (p, last) not in polyLines:
+                    polyLines.append((last, p))
+                last = p
+            polyLines.append((newPoly[len(newPoly)-1], newPoly[0]))
 
         for line in polyLines:
             lineMidX = (line[0][0] + line[1][0])/2.0
