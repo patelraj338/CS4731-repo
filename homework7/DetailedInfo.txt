@@ -1,0 +1,153 @@
+StartTime = -17
+Jump:  StTime = 14 EdTime = 28
+RightMove: StTime = 5 EdTime = 24
+RightMove: StTime = 30 EdTime = 25
+Jump:  StTime = 29 EdTime = 43
+RightMove: StTime = 32 EdTime = 37
+RightMove: StTime = 45 EdTime = 38
+Jump:  StTime = 45 EdTime = 59
+CollectCoin:  time = 74
+CollectCoin:  time = 77
+CollectCoin:  time = 80
+CollectCoin:  time = 92
+CollectCoin:  time = 95
+CollectCoin:  time = 98
+BlockPowerDestroy:  time = 107
+RightMove: StTime = 47 EdTime = 102
+Jump:  StTime = 106 EdTime = 112
+RightMove: StTime = 112 EdTime = 135
+LeftMove: StTime = 146 EdTime = 35
+Jump:  StTime = 178 EdTime = 184
+RightMove: StTime = 182 EdTime = 147
+Jump:  StTime = 198 EdTime = 200
+CollectCoin:  time = 217
+CollectCoin:  time = 217
+LeftMove: StTime = 195 EdTime = 61
+Jump:  StTime = 217 EdTime = 224
+LeftMove: StTime = 224 EdTime = 72
+CollectCoin:  time = 249
+BlockCoinDestroy:  time = 249
+CollectCoin:  time = 250
+Jump:  StTime = 248 EdTime = 254
+RightMove: StTime = 236 EdTime = 174
+Jump:  StTime = 269 EdTime = 275
+LeftMove: StTime = 264 EdTime = 94
+Jump:  StTime = 328 EdTime = 340
+Jump:  StTime = 351 EdTime = 353
+BlockPowerDestroy:  time = 373
+Jump:  StTime = 372 EdTime = 378
+Jump:  StTime = 399 EdTime = 411
+Jump:  StTime = 423 EdTime = 436
+CollectCoin:  time = 448
+CollectCoin:  time = 448
+CollectCoin:  time = 450
+CollectCoin:  time = 451
+CollectCoin:  time = 451
+CollectCoin:  time = 452
+CollectCoin:  time = 452
+Jump:  StTime = 439 EdTime = 454
+CollectCoin:  time = 454
+Jump:  StTime = 466 EdTime = 482
+Jump:  StTime = 501 EdTime = 503
+CollectCoin:  time = 519
+CollectCoin:  time = 519
+CollectCoin:  time = 522
+CollectCoin:  time = 523
+CollectCoin:  time = 525
+CollectCoin:  time = 525
+Jump:  StTime = 514 EdTime = 526
+Jump:  StTime = 547 EdTime = 561
+Jump:  StTime = 574 EdTime = 588
+CollectCoin:  time = 598
+CollectCoin:  time = 598
+CollectCoin:  time = 598
+CollectCoin:  time = 600
+CollectCoin:  time = 601
+CollectCoin:  time = 601
+CollectCoin:  time = 604
+CollectCoin:  time = 604
+CollectCoin:  time = 607
+Jump:  StTime = 596 EdTime = 612
+CollectCoin:  time = 624
+CollectCoin:  time = 627
+CollectCoin:  time = 630
+CollectCoin:  time = 633
+CollectCoin:  time = 634
+CollectCoin:  time = 634
+CollectCoin:  time = 636
+CollectCoin:  time = 636
+CollectCoin:  time = 639
+Jump:  StTime = 634 EdTime = 640
+BlockPowerDestroy:  time = 645
+Jump:  StTime = 644 EdTime = 650
+CollectCoin:  time = 659
+RightMove: StTime = 287 EdTime = 547
+CollectCoin:  time = 661
+CollectCoin:  time = 661
+CollectCoin:  time = 668
+CollectCoin:  time = 668
+Jump:  StTime = 657 EdTime = 669
+RightMove: StTime = 661 EdTime = 560
+LeftMove: StTime = 675 EdTime = 105
+CollectCoin:  time = 697
+RightMove: StTime = 687 EdTime = 579
+LeftMove: StTime = 707 EdTime = 106
+CollectCoin:  time = 708
+CollectCoin:  time = 709
+LeftMove: StTime = 710 EdTime = 107
+RightMove: StTime = 712 EdTime = 589
+LittleState: StTime = -17 EdTime = 724
+LeftMove: StTime = 723 EdTime = 129
+BlockPowerDestroy:  time = 750
+Jump:  StTime = 750 EdTime = 753
+RightMove: StTime = 746 EdTime = 599
+RightMove: StTime = 757 EdTime = 600
+RightMove: StTime = 759 EdTime = 601
+RightMove: StTime = 761 EdTime = 602
+RightMove: StTime = 763 EdTime = 603
+RightMove: StTime = 765 EdTime = 604
+RightMove: StTime = 767 EdTime = 605
+Jump:  StTime = 765 EdTime = 775
+CollectCoin:  time = 783
+CollectCoin:  time = 783
+CollectCoin:  time = 787
+CollectCoin:  time = 787
+CollectCoin:  time = 788
+CollectCoin:  time = 790
+CollectCoin:  time = 790
+CollectCoin:  time = 790
+CollectCoin:  time = 790
+Jump:  StTime = 779 EdTime = 792
+CollectCoin:  time = 839
+CollectCoin:  time = 839
+CollectCoin:  time = 839
+Jump:  StTime = 829 EdTime = 841
+CollectCoin:  time = 842
+CollectCoin:  time = 842
+CollectCoin:  time = 845
+CollectCoin:  time = 845
+CollectCoin:  time = 849
+CollectCoin:  time = 857
+CollectCoin:  time = 860
+CollectCoin:  time = 860
+CollectCoin:  time = 860
+CollectCoin:  time = 861
+CollectCoin:  time = 863
+CollectCoin:  time = 863
+CollectCoin:  time = 863
+CollectCoin:  time = 863
+Jump:  StTime = 849 EdTime = 865
+CollectCoin:  time = 875
+CollectCoin:  time = 877
+CollectCoin:  time = 878
+CollectCoin:  time = 878
+CollectCoin:  time = 878
+CollectCoin:  time = 878
+CollectCoin:  time = 880
+CollectCoin:  time = 880
+CollectCoin:  time = 880
+CollectCoin:  time = 880
+Jump:  StTime = 866 EdTime = 882
+Totaltime = 933
+RightMove: StTime = 769 EdTime = 752
+LargeState: StTime = 724 EdTime = 916
