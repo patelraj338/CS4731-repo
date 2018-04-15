@@ -1,0 +1,42 @@
+## Homework 8 Report
+##
+## Kristian Suhartono
+## 903392481
+
+1. The robot doesn't avoid radiation in the map due to possibly 2 things. The first
+is that if it's near a human rescue zone, it'll get rewards that will cancel out the
+negative reward that it gains by passing through the radiation zone. Rather than
+taking a long detour and accumulating a larger total reward due to the living cost,
+it can just cut through the radiation. Another reason is when the enemy bot is close
+by, the robot will get a larger negative reward if it gets hit by the enemy robot,
+thus it'll try to not get hit by the other robot and sometimes it may be forced to
+run to a radiation zone rather than get hit. To make robots avoid the radiation zone
+we only have to increase the negative reward of being in a radiation area. Make it a
+really large number like -100 value, so that it'll make avoiding the radiation as
+much as possible.
+
+2. Smallest value of enemyDead such that the robot kills when it encounters is 0.
+This is because if the negative reward is a number below 0, that means after the
+enemy is killed, the bot will always lose some amount of reward, which is bad for
+the robot, thus it won't ever do the killing action, but if there's no loss concerned
+when the enemy is dead, the robot will just kill the enemy when they cross paths.
+And the robot will not actively chase the enemy as there are other more rewarding
+actions that can be done rather than killing the enemy.
+
+Smallest value of enemyDead such that the robot is willing
+to seek the enemy is 21. This is because a value of 21 will put killing the enemy
+at a larger priority than rescuing humans, and as a result bots will seek the
+enemy rather than helping humans the enemy is dead the robot will be able to do
+the next most rewarding action.
+
+3. Switching enemy mode from 1 to 2 introduces randomness to the movement of the
+enemy bot, thus causing it to sometimes take less optimal moves. This means that
+the total reward for the player bot will on average increase compared to when
+enemymode is 1. Increasing the number of training episodes will increase the
+maximum amount of rewards that is gained, this is due to the fact that more
+episodes will let the agent explore more states. The more states the agent explore,
+the closer the agent gets to the optimum policy. (As the number of iterations grow
+to infinity, the agent gets closer to the optimum policy, which will be found when
+the agent is able to see all the possible states in the word). So to conclude,
+increasing episodes will get the agent closer to the optimum policy, and decreasing
+will have the opposite effect.

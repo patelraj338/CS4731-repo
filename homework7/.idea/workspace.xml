@@ -15,7 +15,7 @@
       <file leaf-file-name="PlayCustomized.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/PlayCustomized.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-74">
+            <state relative-caret-position="160">
               <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding />
             </state>
@@ -25,18 +25,18 @@
       <file leaf-file-name="MyDNA.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/MyDNA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
+            <state relative-caret-position="1008">
               <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyLevel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyLevel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/MyLevel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="139" column="45" lean-forward="false" selection-start-line="139" selection-start-column="45" selection-end-line="139" selection-end-column="45" />
+            <state relative-caret-position="83">
+              <caret line="124" column="56" lean-forward="false" selection-start-line="124" selection-start-column="56" selection-end-line="124" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -45,7 +45,7 @@
       <file leaf-file-name="Level.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
+            <state relative-caret-position="183">
               <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="33" />
               <folding />
             </state>
@@ -56,17 +56,17 @@
         <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/DNA.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
-              <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+              <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyLevelGenerator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyLevelGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/generator/MyLevelGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="173" column="25" lean-forward="false" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="25" />
+            <state relative-caret-position="165">
+              <caret line="157" column="19" lean-forward="false" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,7 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Best:</find>
       <find>getW</find>
       <find>getPop</find>
       <find>generateRa</find>
@@ -108,6 +107,7 @@
       <find>population</find>
       <find>numberOfC</find>
       <find>iteration</find>
+      <find>build</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -119,8 +119,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/dk/itu/mario/engine/level/MyDNA.java" />
-        <option value="$PROJECT_DIR$/src/dk/itu/mario/engine/level/MyLevel.java" />
         <option value="$PROJECT_DIR$/src/dk/itu/mario/engine/level/generator/MyLevelGenerator.java" />
+        <option value="$PROJECT_DIR$/src/dk/itu/mario/engine/level/MyLevel.java" />
       </list>
     </option>
   </component>
@@ -149,9 +149,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,7 +190,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,11 +354,12 @@
       <workItem from="1522788050895" duration="138000" />
       <workItem from="1522798971085" duration="913000" />
       <workItem from="1522800141228" duration="9253000" />
+      <workItem from="1522978493077" duration="786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10513000" />
+    <option name="totallyTimeSpent" value="11299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -405,6 +406,56 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/PlayCustomized.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/MyLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2224">
+          <caret line="139" column="45" lean-forward="false" selection-start-line="139" selection-start-column="45" selection-end-line="139" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/MyDNA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/DNA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/generator/MyLevelGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2544">
+          <caret line="173" column="25" lean-forward="false" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/PlayCustomized.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -483,25 +534,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/DNA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/PlayCustomized.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74">
+        <state relative-caret-position="160">
           <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding />
         </state>
@@ -509,27 +544,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/MyDNA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="1008">
           <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/MyLevel.java">
+    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/DNA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="139" column="45" lean-forward="false" selection-start-line="139" selection-start-column="45" selection-end-line="139" selection-end-column="45" />
+        <state relative-caret-position="80">
+          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/generator/MyLevelGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="173" column="25" lean-forward="false" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="25" />
+        <state relative-caret-position="165">
+          <caret line="157" column="19" lean-forward="false" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/itu/mario/engine/level/MyLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="124" column="56" lean-forward="false" selection-start-line="124" selection-start-column="56" selection-end-line="124" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>

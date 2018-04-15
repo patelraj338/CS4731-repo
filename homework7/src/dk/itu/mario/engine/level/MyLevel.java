@@ -54,7 +54,9 @@ public class MyLevel extends Level{
 		for (int x = STARTOFFSET; x < STARTOFFSET + 6; x++) {
             this.setBlock(x, DEFAULTHEIGHT-2, HILL_TOP);
             this.setBlock(x, DEFAULTHEIGHT-1, GROUND);
-            this.setBlock(x, DEFAULTHEIGHT-(2 + x - STARTOFFSET), ROCK);
+            for(int y = 0; y < x - STARTOFFSET; y++) {
+                this.setBlock(x, DEFAULTHEIGHT-(2 + x - STARTOFFSET - y), ROCK);
+            }
         }
 
         for (int x = STARTOFFSET + 6; x < width - EXITOFFSET; x=x+3) {
@@ -97,29 +99,31 @@ public class MyLevel extends Level{
 
 	public void buildPowerUP(int start) {
 	    buildBuffer(start);
-        this.setBlock(start + 1, DEFAULTHEIGHT-11, BLOCK_POWERUP);
-        this.setBlock(start, DEFAULTHEIGHT-8, ROCK);
-        this.setBlock(start+1, DEFAULTHEIGHT-8, ROCK);
-        this.setBlock(start+2, DEFAULTHEIGHT-8, ROCK);
+        this.setBlock(start + 1, DEFAULTHEIGHT-6, BLOCK_POWERUP);
+//        this.setBlock(start, DEFAULTHEIGHT-8, ROCK);
+//        this.setBlock(start+1, DEFAULTHEIGHT-8, ROCK);
+//        this.setBlock(start+2, DEFAULTHEIGHT-8, ROCK);
 
     }
 
 	public void buildEnemy(int start) {
         buildBuffer(start);
-        this.setBlock(start, DEFAULTHEIGHT-10, ROCK);
-        this.setBlock(start+1, DEFAULTHEIGHT-10, ROCK);
-        this.setBlock(start+2, DEFAULTHEIGHT-10, ROCK);
+//        this.setBlock(start, DEFAULTHEIGHT-10, ROCK);
+//        this.setBlock(start+1, DEFAULTHEIGHT-10, ROCK);
+//        this.setBlock(start+2, DEFAULTHEIGHT-10, ROCK);
 	    addEnemyLine(start, start + SEGMENTLENGTH, DEFAULTHEIGHT-3, 35);
         addEnemyLine(start, start + SEGMENTLENGTH, DEFAULTHEIGHT-4, 35);
         addEnemyLine(start, start + SEGMENTLENGTH, DEFAULTHEIGHT-5, 35);
         addEnemyLine(start, start + SEGMENTLENGTH, DEFAULTHEIGHT-6, 35);
         addEnemyLine(start, start + SEGMENTLENGTH, DEFAULTHEIGHT-7, 35);
+        addEnemyLine(start, start + SEGMENTLENGTH, DEFAULTHEIGHT-8, 35);
     }
 
 	public void buildGap(int start) {
-        this.setBlock(start, DEFAULTHEIGHT-8, ROCK);
-        this.setBlock(start+1, DEFAULTHEIGHT-8, ROCK);
-        this.setBlock(start+2, DEFAULTHEIGHT-8, ROCK);
+//        this.setBlock(start, DEFAULTHEIGHT-8, ROCK);
+//        this.setBlock(start+1, DEFAULTHEIGHT-8, ROCK);
+//        this.setBlock(start+2, DEFAULTHEIGHT-8, ROCK);
+        addEnemyLine(start, start + SEGMENTLENGTH, DEFAULTHEIGHT-3, 35);
         this.setBlock(start, DEFAULTHEIGHT-2, HILL_TOP);
         this.setBlock(start, DEFAULTHEIGHT - 1, GROUND);
         this.setBlock(start+1, DEFAULTHEIGHT - 1, EMPTY);
@@ -129,7 +133,7 @@ public class MyLevel extends Level{
 
     public void buildBuffer(int start) {
         for (int x = start; x < start + SEGMENTLENGTH; x++) {
-            this.setBlock(x, DEFAULTHEIGHT - 8, ROCK);
+//            this.setBlock(x, DEFAULTHEIGHT - 8, ROCK);
             this.setBlock(x, DEFAULTHEIGHT-2, HILL_TOP);
             this.setBlock(x, DEFAULTHEIGHT - 1, GROUND);
         }
@@ -141,10 +145,10 @@ public class MyLevel extends Level{
             this.setBlock(x, DEFAULTHEIGHT-14, COIN);
             this.setBlock(x, DEFAULTHEIGHT-13, COIN);
             this.setBlock(x, DEFAULTHEIGHT-12, COIN);
-            this.setBlock(x, DEFAULTHEIGHT-11, ROCK);
+            this.setBlock(x, DEFAULTHEIGHT-11, COIN);
             this.setBlock(x, DEFAULTHEIGHT-10, COIN);
             this.setBlock(x, DEFAULTHEIGHT-9, COIN);
-            this.setBlock(x, DEFAULTHEIGHT-8, ROCK);
+            this.setBlock(x, DEFAULTHEIGHT-8, COIN);
             this.setBlock(x, DEFAULTHEIGHT-7, COIN);
             this.setBlock(x, DEFAULTHEIGHT-6, COIN);
             this.setBlock(x, DEFAULTHEIGHT-5, COIN);
@@ -153,6 +157,7 @@ public class MyLevel extends Level{
             this.setBlock(x, DEFAULTHEIGHT-2, HILL_TOP);
             this.setBlock(x, DEFAULTHEIGHT - 1, GROUND);
         }
+        this.setBlock(start+1, DEFAULTHEIGHT-6, BLOCK_COIN);
         this.setBlock(start+1, DEFAULTHEIGHT-11, BLOCK_COIN);
     }
 
