@@ -12,7 +12,7 @@ by, the robot will get a larger negative reward if it gets hit by the enemy robo
 thus it'll try to not get hit by the other robot and sometimes it may be forced to
 run to a radiation zone rather than get hit. To make robots avoid the radiation zone
 we only have to increase the negative reward of being in a radiation area. Make it a
-really large number like -100 value, so that it'll make avoiding the radiation as
+really large number like -1000 value, so that it'll make avoiding the radiation as
 much as possible.
 
 2. Smallest value of enemyDead such that the robot kills when it encounters is 0.
